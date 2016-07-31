@@ -4,20 +4,32 @@ Concatenate filenames into a single file.
 
 ## Node.js Usage
 
+### concat files as if with titles between
 ```js
-var concatFilenames = require('broccoli-concat-filenames');
+const koncat = require('.')
 
-var testsMain = concatFilenames(sourceTree, {
+koncat({
+  inputFiles: input,
+  outputFile: output,
+  title: '// file: {path}'
+})
+```
+
+### create js file with requires
+```js
+const koncat = require('.')
+
+koncat({
   inputFiles: ['tests/**/*_test.js'],
-  outputFile: '/tests_main.js',
-  transform: function(fileName, fileNameWithExtension) {
+  outputFile: 'tests_main.js',
+  transform: function(path) {
     var out = [];
-    out.push("// require module " + fileNameWithExtension);
-    out.push("require('" + fileName + "');");
+    out.push("// require module " + path);
+    out.push("require('" + path + "');");
     out.push("\n");
     return out.join("\n");
   }
-});
+})
 ```
 
 For a directory with the structure
@@ -30,7 +42,7 @@ For a directory with the structure
     - list_test.js
 ```
 
-this creates a file at `/tests_main.js` with the content
+this creates a file at `tests_main.js` with the content
 
 ```js
 // require module tests/utils_test.js
