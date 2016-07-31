@@ -56,7 +56,7 @@ require("tests/controllers/list_test");
 ```
 
 ## CLI Usage
-* `-t'... {path} ...` - add titles with file paths
+* `-t'... {path} ...'` - add titles with file paths
 
 ```sh
 koncat '*.js' > bundle.js
