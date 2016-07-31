@@ -9,7 +9,7 @@ getopt
   .option('[-t, --title]')
 
 koncat({
-  inputFiles: getopt.input,
+  inputFiles: Array.isArray(getopt.input) ? getopt.input : [getopt.input],
   outputFile: getopt.output,
   transform: getopt.title
 });
