@@ -4,7 +4,7 @@ Concatenate filenames into a single file.
 
 ## Node.js Usage
 
-### concat files as if with titles between
+### concat files as is with titles between
 ```js
 const koncat = require('.')
 
