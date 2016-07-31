@@ -7,9 +7,7 @@
   "repository": "https://github.com/a-x-/koncat",
   "author": "Alex Mextner <invntrm@gmail.com>",
   "dependencies": {
-    "broccoli-writer": "^0.1.1",
     "broccoli-kitchen-sink-helpers": "^0.2.0",
-    "mkdirp": "^0.3.5"
   },
   "keywords": [
     "concatenate",
