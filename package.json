@@ -1,19 +1,24 @@
 {
-  "name": "broccoli-concat-filenames",
+  "name": "concat",
   "description": "Concatenates (transformed) filenames into a file",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/pangratz/broccoli-concat-filenames",
-  "author": "Clemens Müller",
+  "repository": "https://github.com/a-x-/concat",
+  "author": "Alex Mextner <invntrm@gmail.com>",
   "dependencies": {
     "broccoli-writer": "^0.1.1",
     "broccoli-kitchen-sink-helpers": "^0.2.0",
     "mkdirp": "^0.3.5"
   },
   "keywords": [
-    "broccoli-plugin",
     "concatenate",
-    "filenames"
-  ]
+    "filenames",
+    "concat",
+    "cat",
+    "cli"
+  ],
+  "bin": {
+    "concat": "./bin.js"
+  }
 }
