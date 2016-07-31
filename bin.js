@@ -9,7 +9,7 @@ getopt
   .option('-t, --title [mask]', 'content delimeter; e.g. // file: {path}')
   .parse(process.argv)
 
-getopt.input = getopt.args
+getopt.input = getopt.args || fs.readFileSync('/dev/stdin', 'utf8').split('\n|\s+')
 
 koncat({
   inputFiles: Array.isArray(getopt.input) ? getopt.input : [getopt.input],
