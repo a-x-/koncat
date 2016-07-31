@@ -11,7 +11,7 @@ module.exports = function (options) {
   
   const inputFiles = options.inputFiles;
   const outputFile = options.outputFile;
-  const transform = typeof options.transform === 'string' ? getDefaultTransform(options.transform) : options.transform;
+  const transform = typeof options.title ? getDefaultTransform(options.title) : options.transform;
 
   (function concat () {
     const inputFiles = helpers.multiGlob(inputFiles, { cwd: process.cwd() })
