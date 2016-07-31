@@ -1,10 +1,10 @@
 {
-  "name": "concat",
+  "name": "koncat",
   "description": "Concatenates (transformed) filenames into a file",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/a-x-/concat",
+  "repository": "https://github.com/a-x-/koncat",
   "author": "Alex Mextner <invntrm@gmail.com>",
   "dependencies": {
     "broccoli-writer": "^0.1.1",
@@ -19,6 +19,6 @@
     "cli"
   ],
   "bin": {
-    "concat": "./bin.js"
+    "koncat": "./bin.js"
   }
 }
