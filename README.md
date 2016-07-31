@@ -61,4 +61,5 @@ require("tests/controllers/list_test");
 ```sh
 koncat '*.js' > bundle.js
 koncat -t'/*< file: {path} */' -- '*.js' > bundle.js
+koncat -o bundle.js -t'//< file: {path}' -- '*.js'
 ```
