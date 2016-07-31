@@ -5,7 +5,7 @@ const getopt = require('commander')
 getopt
   .version('0.0.1')
   .usage('[options] input...')
-  .option('[-o, --output]', 'output file', outputFile)
+  .option('[-o, --output]', 'output file')
   .option('[-t, --title]')
 
 koncat({
