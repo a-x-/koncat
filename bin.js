@@ -8,13 +8,8 @@ getopt
   .option('[-o, --output]', 'output file', outputFile)
   .option('[-t, --title]')
 
-koncat(sourceTree, {
+koncat({
   inputFiles: getopt.input,
   outputFile: getopt.output,
-  transform: function(path, content) {
-    var out = [];
-    getopt.title !== undefined && out.push('\n' + (getopt.title || '//< file: {path}').replace('{path}', path));
-    out.push(content);
-    return out.join('\n');
-  }
+  transform: getopt.title
 });
