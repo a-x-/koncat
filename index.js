@@ -33,8 +33,10 @@ ConcatFilenames.prototype.write = function (readTree, destDir) {
       output.push(self.transform(bareFileName, fileName));
     }
 
-    helpers.assertAbsolutePaths([self.outputFile])
-    mkdirp.sync(path.join(destDir, path.dirname(self.outputFile)))
-    fs.writeFileSync(path.join(destDir, self.outputFile), output.join("\n"))
+    self.outputFile && helpers.assertAbsolutePaths([self.outputFile])
+    self.outputFile && mkdirp.sync(path.join(destDir, path.dirname(self.outputFile)))
+    self.outputFile
+      ? fs.writeFileSync(path.join(destDir, self.outputFile), output.join("\n"))
+      : console.log(output.join("\n"));
   });
 }
