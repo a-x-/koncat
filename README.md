@@ -1,8 +1,8 @@
-# broccoli-concat-filenames
+# koncat
 
 Concatenate filenames into a single file.
 
-## Usage
+## Node.js Usage
 
 ```js
 var concatFilenames = require('broccoli-concat-filenames');
@@ -41,4 +41,12 @@ require("tests/controllers/index_test");
 
 // require module tests/controllers/list_test.js
 require("tests/controllers/list_test");
+```
+
+## CLI Usage
+* `-t'... {path} ...` - add titles with file paths
+
+```sh
+koncat '*.js' > bundle.js
+koncat -t'/*< file: {path} */' -- '*.js' > bundle.js
 ```
